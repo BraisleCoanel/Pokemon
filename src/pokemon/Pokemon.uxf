@@ -49,8 +49,8 @@ bg=Cyan
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
-      <y>110</y>
+      <x>340</x>
+      <y>10</y>
       <w>280</w>
       <h>240</h>
     </coordinates>
@@ -64,7 +64,7 @@ bg=Cyan
 - enhancementModifier : double
 
 --
-methods/constrcos</panel_attributes>
++ Pokemon(int, String) : constructor</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -75,27 +75,66 @@ methods/constrcos</panel_attributes>
       <w>240</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>/pokemon.model :: Derpable/
+    <panel_attributes>/pokemon.model :: Water/
 --
 
-+ sayDerpy() : void
-+ writeDerpy() : String
-+ countDerby(String) : int</panel_attributes>
++ sayName() : void
++ writeSound() : String
++ countAttack(String) : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>390</y>
-      <w>290</w>
-      <h>70</h>
+      <x>300</x>
+      <y>320</y>
+      <w>370</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>/package :: AbstractClass or Interface/
+    <panel_attributes>pokemon.model :: Squirtle
 --
 
 --
-</panel_attributes>
+
++ Squirtle(int, String) : constructor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>240</y>
+      <w>60</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>360</y>
+      <w>70</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>500</y>
+      <w>370</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>pokemon.model :: Squirtle
+--
+
+--
+
++ Squirtle(int, String) : constructor</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
