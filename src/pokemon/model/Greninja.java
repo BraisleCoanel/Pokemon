@@ -9,7 +9,7 @@ public class Greninja extends Pokemon implements Water, Dark
 	
 	public int waterShuriken(int amount)
 	{
-		int shuriken = 5;
+		int shuriken = (int)(Math.random()*4)+2;
 		
 		return shuriken;
 	}
