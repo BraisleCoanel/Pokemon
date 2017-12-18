@@ -2,7 +2,6 @@ package pokemon.model;
 
 public class Bibarel extends Pokemon implements Water, Normal
 {
-
 	public Bibarel(int number, String name)
 	{
 		super(number, name);
