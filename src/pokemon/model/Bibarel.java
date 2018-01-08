@@ -2,9 +2,29 @@ package pokemon.model;
 
 public class Bibarel extends Pokemon implements Water, Normal
 {
+	public Bibarel()
+	{
+		super(400, "Bibarel");
+		setup();
+	}
+	
+	public Bibarel(String name)
+	{
+		super(400, name);
+		setup();
+	}
+	
+	protected void setup()
+	{
+		this.setAttackPoints(85);
+		this.setCanEvolve(false);
+		this.setEnhancmentModifier(.05);
+		this.setHealthPoints(79);
+	}
 	public Bibarel(int number, String name)
 	{
 		super(number, name);
+		setup();
 	}
 
 	public int waterShuriken(int amount)

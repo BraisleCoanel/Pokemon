@@ -2,10 +2,30 @@ package pokemon.model;
 
 public class Blastoise extends Pokemon implements Water
 {
+	public Blastoise()
+	{
+		super(9, "Blastoise");
+		setup();
+	}
+	
+	public Blastoise(String name)
+	{
+		super(9, name);
+		setup();
+	}
 
 	public Blastoise(int number, String name)
 	{
 		super(number, name);
+		setup();
+	}
+	
+	protected void setup()
+	{
+		this.setAttackPoints(83);
+		this.setCanEvolve(false);
+		this.setEnhancmentModifier(.05);
+		this.setHealthPoints(79);
 	}
 
 	public int waterShuriken(int amount)
