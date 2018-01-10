@@ -23,7 +23,7 @@ public class PokedexPanel extends JPanel
 	
 	private JCheckBox evolvableBox;
 	private JTextField nameField;
-	private JTextField numberFlield;
+	private JTextField numberField;
 	private JTextField attackField;
 	private JTextField healthField;
 	private JTextField modifierField;
@@ -36,8 +36,9 @@ public class PokedexPanel extends JPanel
 	private JComboBox pokedexDropdown;
 	
 	private JPanel firstType; 
-	private JPanel secondType
-	
+	private JPanel secondType;
+	private JPanel thirdType;
+	private JPanel fourthType;
 	
 	public PokedexPanel(PokemonController appController)
 	{
@@ -46,9 +47,39 @@ public class PokedexPanel extends JPanel
 		
 		appLayout = new SpringLayout();
 		
-		evolvableBox = JCheckBox();
+		evolvableBox = new JCheckBox();
+		nameField = new JTextField("name");
+		numberField = new JTextField("##");
+		attackField = new JTextField("ap");
+		healthField = new JTextField("hp");
+		modifierField = new JTextField("mod");
 	
-		iconLabel = newJLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/Pokeball.png")), JLabel.CENTER);
+		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/Pokeball.png")), JLabel.CENTER);
+		
+		nameLabel = new JLabel("name");
+		evolvableLabel = new JLabel("evolvable");
+		numberLabel = new JLabel("number");
+		attackLabel = new JLabel("attack");
+		healthLabel = new JLabel("health");
+		modifierLabel = new JLabel("modifier");
+		pokedexDropdown = new JComboBox();
+		clearButton = new JButton("clear");
+		saveButton = new JButton("save");
+		
+		descriptionArea = new JTextArea(5, 10);
+		typeArea = new JTextArea(4, 15);
+		
+		
+		firstType = new JPanel();
+		secondType = new JPanel();
+		thirdType = new JPanel();
+		fourthType = new JPanel();
+		
+//		setupComboBox();
+//		setupTypePanels();
+//		setupPanel();
+//		setupLayout();
+//		setupListeners();
 	}
 	
 }
