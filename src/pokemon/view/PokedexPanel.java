@@ -1,4 +1,4 @@
-package pokemon.controller;
+package pokemon.view;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -75,11 +75,57 @@ public class PokedexPanel extends JPanel
 		thirdType = new JPanel();
 		fourthType = new JPanel();
 		
-//		setupComboBox();
-//		setupTypePanels();
-//		setupPanel();
-//		setupLayout();
-//		setupListeners();
+		setupComboBox();
+		setupTypePanels();
+		setupPanel();
+		setupLayout();
+		setupListeners();
 	}
 	
+	private void updatePokedexInfo(int index)
+	{
+		//Update basic fields
+		nameField.setText(appController.getPokedex().get(index).getName());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
+		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
+		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancmentModifier() + "");
+		
+		//Update Text areas
+		descriptionArea.setText(appController.getPokedex().get(index).toString());
+		typeArea.setText("");
+		
+		for (String current : appController.getPokedex().get(index).getPokemonTypes())
+		{
+			typeArea.append(current + "\n");
+		}
+		
+	}
+	
+	private void setupComboBox()
+	{
+		DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController.convertPokedex());
+		pokedexDropdown.setModel(pokemonModel);
+	}
+	
+	private void setupTypePanels()
+	{
+		
+	}
+	
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
+	}
 }

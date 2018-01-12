@@ -1,6 +1,5 @@
 package pokemon.view;
 
-import pokemon.controller.PokedexPanel;
 import javax.swing.JFrame;
 import pokemon.controller.PokemonController;
 
