@@ -9,6 +9,15 @@ public class PokemonController
 {
 	private List <Pokemon> pokedex;
 	
+	private void buildPokedex()
+	{
+		pokedex.add(new Bibarel());
+		pokedex.add(new Blastoise());
+		pokedex.add(new Darkrai());
+		pokedex.add(new Eevee());
+		pokedex.add(new Greninja());
+		pokedex.add(new Umbreon());
+	}
 	public List<Pokemon> getPokedex()
 	{
 		return pokedex;
@@ -45,6 +54,8 @@ public class PokemonController
 		selected.setEnhancmentModifier(modify);
 		selected.setName(name);
 		selected.setHealthPoints(health);
+		
+		FileController.savePokemonToFile((ArrayList<Pokemon>) pokedex);
 	}
 	
 	public void start()
